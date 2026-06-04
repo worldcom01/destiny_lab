@@ -45,16 +45,16 @@ export default function Hero() {
         {/* CTAs */}
         <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
-            href="#services"
+            href="/code"
             className="w-full sm:w-auto px-7 py-3.5 bg-[#D4AF37] text-[#0F172A] rounded-xl font-semibold text-sm hover:bg-[#e8c84a] transition-colors shadow-lg shadow-[#D4AF37]/20"
           >
-            운명코드 체험하기
+            운명코드 시작
           </Link>
           <Link
-            href="#waitlist"
+            href="/birth"
             className="w-full sm:w-auto px-7 py-3.5 bg-white/5 border border-white/15 text-white rounded-xl font-semibold text-sm hover:bg-white/10 transition-colors"
           >
-            Birth Designer 사전예약
+            Birth Designer 시작
           </Link>
         </div>
 

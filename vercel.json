@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/code",
+      "destination": "https://destiny-code.kr",
+      "permanent": false
+    },
+    {
+      "source": "/birth",
+      "destination": "https://destiny-code.kr",
+      "permanent": false
+    }
+  ]
+}
