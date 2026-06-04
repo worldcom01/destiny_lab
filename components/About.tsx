@@ -5,8 +5,8 @@ const pillars = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
       </svg>
     ),
-    title: "동양 명리학",
-    desc: "수천 년의 지혜가 담긴 사주, 성명학 이론을 체계적으로 분석합니다.",
+    title: "전통 지식 체계",
+    desc: "사주, 점성술, 타로 등 인류가 축적해온 인간 이해의 체계를 연구 자료로 활용합니다.",
   },
   {
     icon: (
@@ -32,8 +32,8 @@ const pillars = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
       </svg>
     ),
-    title: "성격 분석",
-    desc: "MBTI, 혈액형, 다양한 성격 유형을 교차 분석하여 입체적 이해를 제공합니다.",
+    title: "패턴 인텔리전스",
+    desc: "MBTI, 혈액형, 다양한 체계의 교집합을 분석해 개인의 행동 패턴을 입체적으로 이해합니다.",
   },
 ];
 
@@ -55,16 +55,21 @@ export default function About() {
             </h2>
 
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4 text-base">
-              Destiny Lab은 동양 명리학, 성명학, 성격 분석, 데이터 분석, AI 기술을
-              결합하여 새로운 형태의 인생 인사이트 서비스를 연구합니다.
+              인간의 성향, 관계, 선택, 정체성의 패턴을 연구하는
+              AI Human Pattern Lab입니다.
+            </p>
+
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4 text-base">
+              우리는 운세를 연구하지 않습니다. 사주, 점성술, MBTI 등
+              인류가 오랫동안 인간을 이해하려 했던 다양한 체계의 교집합에서
+              새로운 인사이트를 발견합니다.
             </p>
 
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base">
-              수천 년의 동양 지혜와 현대 과학의 언어가 만나는 곳.
-              우리는 운명을 예언하지 않습니다.{" "}
               <span className="text-[#0F172A] dark:text-white font-medium">
-                데이터로 패턴을 읽고, 당신의 선택을 돕습니다.
-              </span>
+                데이터와 전통 지식의 교차점.
+              </span>{" "}
+              우리는 그곳에서 인간을 이해합니다.
             </p>
 
             <div className="mt-8 flex items-center gap-3 text-sm text-slate-500 dark:text-slate-500">

@@ -3,28 +3,35 @@ const milestones = [
     status: "current",
     phase: "Phase 1",
     title: "운명코드",
-    description: "사주, MBTI, 혈액형, 타로, 점성술의 교집합 분석 서비스. 현재 베타 서비스 중입니다.",
-    label: "현재 진행",
+    description: "사주, MBTI, 혈액형, 타로, 점성술 등 다양한 체계의 교집합을 분석하여 인간의 핵심 패턴을 탐색하는 서비스.",
+    label: "현재 서비스",
   },
   {
     status: "upcoming",
     phase: "Phase 2",
     title: "Birth Designer",
-    description: "출생일, 출생시, 이름 조합 시뮬레이션 서비스. 사전예약을 받고 있습니다.",
-    label: "준비중",
+    description: "이름, 출생일, 출생시 조합을 분석하여 출생 패턴을 시뮬레이션하는 데이터 기반 설계 서비스.",
+    label: "출시 준비중",
   },
   {
     status: "research",
     phase: "Phase 3",
-    title: "궁합 분석",
-    description: "두 사람의 명리학적 데이터를 기반으로 관계 패턴을 분석하는 서비스.",
+    title: "Relationship Code",
+    description: "두 사람의 데이터를 기반으로 관계 패턴, 소통 방식, 갈등 가능성, 시너지 포인트를 분석하는 서비스.",
     label: "연구중",
   },
   {
     status: "research",
     phase: "Phase 4",
-    title: "AI 작명 엔진",
-    description: "사주에 맞는 이름을 AI가 데이터 기반으로 제안하는 작명 서비스.",
+    title: "Identity Map",
+    description: "MBTI, 사주, 성격 데이터, 점성술 등 다양한 패턴을 통합 분석하여 개인의 정체성을 시각화하는 서비스.",
+    label: "연구중",
+  },
+  {
+    status: "research",
+    phase: "Phase 5",
+    title: "Decision Compass",
+    description: "창업, 이직, 관계, 투자 등 중요한 선택에서 나타나는 의사결정 패턴을 분석하는 서비스.",
     label: "연구중",
   },
 ];
@@ -62,10 +69,10 @@ export default function Roadmap() {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] dark:text-white mb-4">
-            서비스 로드맵
+            Research Roadmap
           </h2>
           <p className="text-slate-500 dark:text-slate-400 text-sm">
-            Destiny Lab이 연구하고 만들어가는 서비스들
+            인간 패턴 이해를 위해 Destiny Lab이 연구하고 만들어가는 서비스들
           </p>
         </div>
 

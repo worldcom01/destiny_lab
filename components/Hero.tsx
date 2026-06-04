@@ -24,22 +24,22 @@ export default function Hero() {
         <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 mb-8">
           <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
           <span className="text-[#D4AF37] text-xs font-medium tracking-widest uppercase">
-            AI 운명 데이터 연구소
+            AI Human Pattern Lab
           </span>
         </div>
 
         {/* Headline */}
         <h1 className="animate-fade-up-delay-1 text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
-          데이터로 읽는
+          인간을 이해하는
           <br />
-          <span className="gold-gradient">운명의 패턴</span>
+          <span className="gold-gradient">새로운 관점</span>
         </h1>
 
         {/* Subheadline */}
         <p className="animate-fade-up-delay-2 text-base md:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10">
-          사주, 성명학, 성격 유형 분석을
+          우리는 운세를 연구하지 않습니다.
           <br className="hidden sm:block" />
-          현대적인 AI 기술로 재해석합니다.
+          인간의 성향, 관계, 선택의 패턴을 연구합니다.
         </p>
 
         {/* CTAs */}
