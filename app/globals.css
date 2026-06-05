@@ -66,6 +66,10 @@ body {
   opacity: 0;
 }
 
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
 .gold-gradient {
   background: linear-gradient(135deg, #D4AF37 0%, #f0d060 50%, #b8952e 100%);
   -webkit-background-clip: text;
