@@ -1,11 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/code",
-      "destination": "https://destiny-code.vercel.app/",
-      "permanent": false
-    },
-    {
       "source": "/birth",
       "destination": "https://destiny-code.kr",
       "permanent": false
