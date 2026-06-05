@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/code",
-      "destination": "https://destiny-code.kr",
+      "destination": "https://destiny-code.vercel.app/",
       "permanent": false
     },
     {
