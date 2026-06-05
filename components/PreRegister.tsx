@@ -53,7 +53,7 @@ export default function PreRegister() {
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 mb-8">
           <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
           <span className="text-[#D4AF37] text-xs font-medium tracking-widest uppercase">
-            Early Access
+            먼저 경험하기
           </span>
         </div>
 

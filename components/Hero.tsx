@@ -3,12 +3,11 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0F172A]">
-      {/* Background subtle pattern */}
+      {/* Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#D4AF37]/5 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[#D4AF37]/5 blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-slate-800/30 blur-3xl" />
-        {/* Grid lines */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -21,55 +20,54 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {/* Badge */}
-        <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 mb-8">
+        <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 mb-10">
           <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
           <span className="text-[#D4AF37] text-xs font-medium tracking-widest uppercase">
-            AI Human Pattern Lab
+            Destiny Lab
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="animate-fade-up-delay-1 text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
-          인간을 이해하는
+        <h1 className="animate-fade-up-delay-1 text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-8">
+          MBTI와 사주를 겹쳐보면
           <br />
-          <span className="gold-gradient">새로운 관점</span>
+          <span className="gold-gradient">진짜 내 모습이 보일까?</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="animate-fade-up-delay-2 text-base md:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10">
-          우리는 운세를 연구하지 않습니다.
-          <br className="hidden sm:block" />
-          인간의 성향, 관계, 선택의 패턴을 연구합니다.
+        <p className="animate-fade-up-delay-2 text-base md:text-lg text-slate-400 max-w-xl mx-auto leading-loose mb-12">
+          사주, MBTI, 타로, 점성술.
+          <br />
+          서로 다른 언어가 같은 방향을 가리킬 때,
+          <br />
+          그곳에 나를 이해하는 힌트가 있습니다.
         </p>
 
         {/* CTAs */}
-        <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
           <Link
             href="/code"
-            className="w-full sm:w-auto px-7 py-3.5 bg-[#D4AF37] text-[#0F172A] rounded-xl font-semibold text-sm hover:bg-[#e8c84a] transition-colors shadow-lg shadow-[#D4AF37]/20"
+            className="w-full sm:w-auto px-8 py-4 bg-[#D4AF37] text-[#0F172A] rounded-xl font-semibold text-sm hover:bg-[#e8c84a] transition-colors shadow-lg shadow-[#D4AF37]/20"
           >
-            운명코드 시작
+            내 운명코드 확인하기
           </Link>
           <Link
             href="/birth"
-            className="w-full sm:w-auto px-7 py-3.5 bg-white/5 border border-white/15 text-white rounded-xl font-semibold text-sm hover:bg-white/10 transition-colors"
+            className="w-full sm:w-auto px-6 py-3.5 text-slate-500 text-sm hover:text-slate-300 transition-colors"
           >
-            Birth Designer 시작
+            Birth Designer →
           </Link>
         </div>
 
-        {/* Stats */}
-        <div className="animate-fade-up-delay-3 mt-20 grid grid-cols-3 gap-8 border-t border-white/10 pt-12">
+        {/* Question cards */}
+        <div className="animate-fade-up-delay-3 border-t border-white/8 pt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/8">
           {[
-            { value: "2+", label: "서비스 연구중" },
-            { value: "AI", label: "기반 분석" },
-            { value: "Beta", label: "서비스 준비중" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                {stat.value}
-              </div>
-              <div className="text-xs text-slate-500 tracking-wide">{stat.label}</div>
+            "나는 왜 늘 비슷한\n선택을 할까?",
+            "나는 왜 특정 사람에게\n끌릴까?",
+            "내 MBTI는 사주에도\n보일까?",
+          ].map((q) => (
+            <div key={q} className="bg-[#0F172A] px-6 py-8 text-center">
+              <p className="text-slate-400 text-sm leading-relaxed whitespace-pre-line">{q}</p>
             </div>
           ))}
         </div>
@@ -77,7 +75,6 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="text-xs text-slate-600 tracking-widest uppercase">Scroll</span>
         <div className="w-px h-8 bg-gradient-to-b from-slate-600 to-transparent" />
       </div>
     </section>

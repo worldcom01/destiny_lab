@@ -25,8 +25,8 @@ const services = [
     title: "Birth Designer",
     subtitle: "출생 조합 시뮬레이터",
     description:
-      "출생일, 출생시, 이름을 조합하여 최적의 조합을 시뮬레이션합니다. 태어날 아이, 또는 새로운 시작을 위한 데이터 기반 설계 도구.",
-    tags: ["출생일", "출생시", "이름", "시뮬레이션"],
+      "이름, 시작일, 브랜드명 조합을 탐색하는 실험 도구. 어떤 조합이 어떤 패턴을 만드는지 데이터로 시뮬레이션합니다.",
+    tags: ["이름", "시작일", "브랜드명", "시뮬레이션"],
     cta: "Birth Designer 시작",
     href: "/birth",
     icon: (
@@ -45,14 +45,14 @@ export default function Services() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0F172A]/5 dark:bg-[#D4AF37]/10 border border-[#0F172A]/10 dark:border-[#D4AF37]/20 mb-6">
             <span className="text-xs font-medium text-[#0F172A] dark:text-[#D4AF37] tracking-widest uppercase">
-              Services
+              실험실
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] dark:text-white mb-4">
-            연구 중인 서비스
+            지금 실험 중인 것들
           </h2>
           <p className="text-slate-500 dark:text-slate-400 max-w-xl mx-auto text-sm leading-relaxed">
-            전통 명리학의 깊이와 AI의 정밀함이 결합된 새로운 형태의 인사이트 서비스
+            인간의 패턴을 이해하기 위해 Destiny Lab이 진행 중인 실험들입니다.
           </p>
         </div>
 
