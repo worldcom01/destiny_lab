@@ -1,17 +1,12 @@
 import Link from "next/link";
-
-const footerLinks = [
-  { label: "소개", href: "#about" },
-  { label: "서비스", href: "#services" },
-  { label: "로드맵", href: "#roadmap" },
-  { label: "사전예약", href: "#waitlist" },
-];
+import Logo from "@/components/Logo";
+import { DISCLAIMER, INSTAGRAM_URL, navLinks as footerLinks } from "@/lib/content";
 
 const socialLinks = [
   {
     id: "instagram",
     label: "Destiny Lab Instagram",
-    href: "https://www.instagram.com/destinylab.kr_official/",
+    href: INSTAGRAM_URL,
     active: true,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-[22px] h-[22px]">
@@ -74,19 +69,16 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-              <div className="w-7 h-7 rounded-lg bg-[#D4AF37] flex items-center justify-center">
-                <span className="text-[#0F172A] font-bold text-xs">D</span>
-              </div>
-              <span className="font-semibold text-white">Destiny Lab</span>
+            <div className="mb-3">
+              <Logo className="text-lg text-white" />
             </div>
             <p className="text-xs text-slate-500 tracking-widest uppercase">
-              Data meets Destiny
+              AI Human Pattern Lab
             </p>
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6">
             {footerLinks.map((link) => (
               <Link
                 key={link.href}
@@ -99,8 +91,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social icons */}
-        <div className="flex items-center justify-center gap-5 mt-10 mb-2">
+        {/* Social icons — 기존 /#waitlist 링크가 도착하는 자리 */}
+        <div id="waitlist" className="flex items-center justify-center gap-5 mt-10 mb-2">
           {socialLinks.map((s) =>
             s.active ? (
               <a
@@ -138,7 +130,7 @@ export default function Footer() {
 
         {/* Disclaimer */}
         <p className="mt-6 text-xs text-slate-700 text-center leading-relaxed max-w-2xl mx-auto">
-          본 서비스의 모든 분석 결과는 참고용 자료입니다. 의료, 법률, 재정적 판단의 근거로 사용하지 마세요.
+          {DISCLAIMER}
         </p>
       </div>
     </footer>

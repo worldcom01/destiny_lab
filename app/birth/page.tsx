@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Birth Designer | Destiny Lab",
+  title: { absolute: "Birth Designer | Destiny Lab" },
   description: "출생일, 출생시, 작명 시뮬레이션 플랫폼",
 };
 

@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Logo from "@/components/Logo";
+import { DESTINY_CODE_HREF, navLinks } from "@/lib/content";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -12,13 +14,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
-
-  const navLinks = [
-    { href: "#about", label: "소개" },
-    { href: "#services", label: "서비스" },
-    { href: "#roadmap", label: "로드맵" },
-    { href: "#waitlist", label: "사전예약" },
-  ];
 
   return (
     <nav
@@ -34,12 +29,7 @@ export default function Navbar() {
           className="flex items-center gap-2 group"
           aria-label="Destiny Lab 홈"
         >
-          <div className="w-8 h-8 rounded-lg bg-[#0F172A] dark:bg-[#D4AF37] flex items-center justify-center">
-            <span className="text-[#D4AF37] dark:text-[#0F172A] font-bold text-sm">D</span>
-          </div>
-          <span className="font-semibold text-[#0F172A] dark:text-white tracking-tight">
-            Destiny Lab
-          </span>
+          <Logo className={`text-lg ${scrolled ? "text-[#0F172A] dark:text-white" : "text-white"}`} />
         </Link>
 
         {/* Desktop nav */}
@@ -48,24 +38,29 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-slate-600 dark:text-slate-400 hover:text-[#0F172A] dark:hover:text-white transition-colors"
+              className={`text-sm transition-colors ${
+                scrolled
+                  ? "text-slate-600 dark:text-slate-400 hover:text-[#0F172A] dark:hover:text-white"
+                  : "text-slate-400 hover:text-white"
+              }`}
             >
               {link.label}
             </Link>
           ))}
           <Link
-            href="#waitlist"
+            href={DESTINY_CODE_HREF}
             className="text-sm px-4 py-2 bg-[#0F172A] dark:bg-[#D4AF37] text-white dark:text-[#0F172A] rounded-lg font-medium hover:opacity-90 transition-opacity"
           >
-            사전예약
+            Destiny Code 열기
           </Link>
         </div>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 text-slate-600 dark:text-slate-400"
+          className={`md:hidden p-2 ${scrolled ? "text-slate-600 dark:text-slate-400" : "text-slate-300"}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="메뉴 열기"
+          aria-expanded={menuOpen}
         >
           <svg
             className="w-5 h-5"
@@ -95,6 +90,13 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href={DESTINY_CODE_HREF}
+            className="text-sm font-medium text-[#b8952e] dark:text-[#D4AF37] py-1"
+            onClick={() => setMenuOpen(false)}
+          >
+            Destiny Code 열기 →
+          </Link>
         </div>
       )}
     </nav>

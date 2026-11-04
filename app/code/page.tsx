@@ -1,6 +1,7 @@
 export const metadata = {
-  title: "운명코드 | Destiny Lab",
-  description: "사주, MBTI, 혈액형, 타로, 점성술 교집합 분석 서비스",
+  title: "Destiny Code 시작하기",
+  description: "사주, MBTI, 혈액형, 타로, 점성술, 손금의 교집합을 AI로 분석하는 Destiny Code",
+  alternates: { canonical: "/code" },
 };
 
 export default function CodePage() {
@@ -8,7 +9,7 @@ export default function CodePage() {
     <iframe
       src="https://destiny-code.vercel.app/"
       className="fixed inset-0 w-full h-full border-0"
-      title="운명코드"
+      title="Destiny Code"
       allow="clipboard-write"
     />
   );

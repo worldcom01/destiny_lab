@@ -1,34 +1,37 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import { INSTAGRAM_URL, SITE_URL } from "@/lib/content";
 
 const geist = Geist({
   variable: "--font-pretendard",
   subsets: ["latin"],
 });
 
+const description =
+  "사람이 반복하는 패턴을 AI로 다시 읽는 연구실. Destiny Lab은 여러 해석 체계를 AI로 교차하는 Destiny Code를 운영하고, 개발 과정을 공개합니다.";
+
 export const metadata: Metadata = {
-  title: "Destiny Lab | AI 운명 데이터 연구소",
-  description:
-    "사주, 성명학, 성격 분석을 AI와 데이터 기술로 재해석하는 Destiny Lab. 동양 명리학과 현대 AI 기술이 만나는 곳.",
-  keywords: ["사주", "명리학", "성명학", "AI", "운명코드", "Birth Designer", "Destiny Lab"],
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Destiny Lab | AI Human Pattern Lab",
+    template: "%s | Destiny Lab",
+  },
+  description,
+  keywords: ["Destiny Lab", "Destiny Code", "AI Human Pattern Lab", "사주", "손금", "MBTI", "AI 분석"],
   authors: [{ name: "Destiny Lab" }],
   creator: "Destiny Lab",
-  metadataBase: new URL("https://destinylab.kr"),
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://destinylab.kr",
-    title: "Destiny Lab | AI 운명 데이터 연구소",
-    description:
-      "사주, 성명학, 성격 분석을 AI와 데이터 기술로 재해석하는 Destiny Lab.",
+    title: "Destiny Lab | AI Human Pattern Lab",
+    description,
     siteName: "Destiny Lab",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Destiny Lab | AI 운명 데이터 연구소",
-    description:
-      "사주, 성명학, 성격 분석을 AI와 데이터 기술로 재해석하는 Destiny Lab.",
+    title: "Destiny Lab | AI Human Pattern Lab",
+    description,
   },
   robots: {
     index: true,
@@ -51,10 +54,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Destiny Lab",
-              url: "https://destinylab.kr",
-              description:
-                "동양 명리학, 성명학, 성격 분석을 AI 기술로 재해석하는 운명 데이터 연구소",
-              sameAs: [],
+              url: SITE_URL,
+              description: "여러 해석 체계를 AI로 교차해 사람의 패턴을 연구하는 AI Human Pattern Lab",
+              sameAs: [INSTAGRAM_URL],
             }),
           }}
         />

@@ -1,4 +1,11 @@
 import Link from "next/link";
+import { DESTINY_CODE_HREF, birthDesigner, destinyCode } from "@/lib/content";
+
+const status = [
+  { label: "운영 중", title: destinyCode.name, desc: "분석 엔진 Engine V4 적용" },
+  { label: "최근 릴리스", title: "Result First UX V1.1", desc: "AI 종합 분석을 결과 첫 화면에" },
+  { label: "준비 중", title: birthDesigner.name, desc: birthDesigner.status },
+];
 
 export default function Hero() {
   return (
@@ -23,51 +30,49 @@ export default function Hero() {
         <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 mb-10">
           <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
           <span className="text-[#D4AF37] text-xs font-medium tracking-widest uppercase">
-            Destiny Lab
+            AI Human Pattern Lab
           </span>
         </div>
 
         {/* Headline */}
         <h1 className="animate-fade-up-delay-1 text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-8">
-          MBTI와 사주를 겹쳐보면
+          사람이 반복하는 패턴을
           <br />
-          <span className="gold-gradient">진짜 내 모습이 보일까?</span>
+          <span className="gold-gradient">AI로 다시 읽는 연구실</span>
         </h1>
 
         {/* Subheadline */}
         <p className="animate-fade-up-delay-2 text-base md:text-lg text-slate-400 max-w-xl mx-auto leading-loose mb-12">
-          사주, MBTI, 타로, 점성술.
+          사주, 손금, 혈액형, 성격 유형처럼
           <br />
-          서로 다른 언어가 같은 방향을 가리킬 때,
+          사람을 설명해 온 여러 해석 체계를 AI로 교차해 봅니다.
           <br />
-          그곳에 나를 이해하는 힌트가 있습니다.
+          무엇을 만들고 어떻게 바꿨는지, 개발 과정을 그대로 공개합니다.
         </p>
 
         {/* CTAs */}
         <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
           <Link
-            href="/code"
+            href={DESTINY_CODE_HREF}
             className="w-full sm:w-auto px-8 py-4 bg-[#D4AF37] text-[#0F172A] rounded-xl font-semibold text-sm hover:bg-[#e8c84a] transition-colors shadow-lg shadow-[#D4AF37]/20"
           >
-            내 운명코드 확인하기
+            Destiny Code 시작하기
           </Link>
           <Link
-            href="/birth"
+            href="/updates"
             className="w-full sm:w-auto px-6 py-3.5 text-slate-500 text-sm hover:text-slate-300 transition-colors"
           >
-            Birth Designer →
+            개발 기록 보기 →
           </Link>
         </div>
 
-        {/* Question cards */}
+        {/* Status cards */}
         <div className="animate-fade-up-delay-3 border-t border-white/8 pt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/8">
-          {[
-            "나는 왜 늘 비슷한\n선택을 할까?",
-            "나는 왜 특정 사람에게\n끌릴까?",
-            "내 MBTI는 사주에도\n보일까?",
-          ].map((q) => (
-            <div key={q} className="bg-[#0F172A] px-6 py-8 text-center">
-              <p className="text-slate-400 text-sm leading-relaxed whitespace-pre-line">{q}</p>
+          {status.map((s) => (
+            <div key={s.label} className="bg-[#0F172A] px-6 py-8 text-center">
+              <p className="text-[#D4AF37] text-xs font-medium tracking-widest uppercase mb-2">{s.label}</p>
+              <p className="text-white text-sm font-semibold mb-1">{s.title}</p>
+              <p className="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
