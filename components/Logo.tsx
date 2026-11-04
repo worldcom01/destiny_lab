@@ -2,15 +2,15 @@
 export default function Logo({ className = "" }: { className?: string }) {
   return (
     <span className={`font-semibold tracking-tight whitespace-nowrap ${className}`}>
-      Dest
-      <span className="relative">
-        ı
-        <span
-          aria-hidden
-          className="absolute left-1/2 top-[0.08em] w-[0.2em] h-[0.2em] -translate-x-1/2 rounded-full bg-[#D4AF37]"
-        />
+      <span aria-hidden>
+        Dest
+        <span className="relative">
+          ı
+          <span className="absolute left-1/2 top-[0.08em] w-[0.2em] h-[0.2em] -translate-x-1/2 rounded-full bg-[#D4AF37]" />
+        </span>
+        ny <span className="font-light">Lab</span>
       </span>
-      ny <span className="font-light">Lab</span>
+      <span className="sr-only">Destiny Lab</span>
     </span>
   );
 }

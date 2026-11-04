@@ -67,14 +67,16 @@ export default function Hero() {
         </div>
 
         {/* Status cards */}
-        <div className="animate-fade-up-delay-3 border-t border-white/8 pt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/8">
-          {status.map((s) => (
-            <div key={s.label} className="bg-[#0F172A] px-6 py-8 text-center">
-              <p className="text-[#D4AF37] text-xs font-medium tracking-widest uppercase mb-2">{s.label}</p>
-              <p className="text-white text-sm font-semibold mb-1">{s.title}</p>
-              <p className="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
-            </div>
-          ))}
+        <div className="animate-fade-up-delay-3 border-t border-white/8 pt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/8">
+            {status.map((s) => (
+              <div key={s.label} className="bg-[#0F172A] px-6 py-8 text-center">
+                <p className="text-[#D4AF37] text-xs font-medium tracking-widest uppercase mb-2">{s.label}</p>
+                <p className="text-white text-sm font-semibold mb-1">{s.title}</p>
+                <p className="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
