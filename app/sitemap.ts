@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/research",
     "/about",
     "/code",
+    "/birth",
   ];
   return paths.map((path) => ({ url: `${SITE_URL}${path}` }));
 }

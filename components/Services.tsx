@@ -25,7 +25,7 @@ const services = [
     subtitle: "출생 조합 시뮬레이터",
     description: birthDesigner.summary,
     tags: [{ name: "이름" }, { name: "시작일" }, { name: "브랜드명" }, { name: "시뮬레이션" }],
-    cta: null,
+    cta: { label: "Birth Designer 살펴보기", href: "/birth" },
     detailHref: null,
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -76,15 +76,22 @@ export function ServiceCards({ showDetailLink = true }: { showDetailLink?: boole
           {/* CTA */}
           {s.cta ? (
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-              <Link
-                href={s.cta.href}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A] dark:text-[#D4AF37] group-hover:gap-3 transition-all"
-              >
-                {s.cta.label}
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              {/* /birth is another zone (Birth Designer app): plain <a>, not next/link */}
+              {s.cta.href.startsWith("/birth") ? (
+                <a href={s.cta.href} className="inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A] dark:text-[#D4AF37] group-hover:gap-3 transition-all">
+                  {s.cta.label}
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </Link>
+                </a>
+              ) : (
+                <Link href={s.cta.href} className="inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A] dark:text-[#D4AF37] group-hover:gap-3 transition-all">
+                  {s.cta.label}
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+                </Link>
+              )}
               {showDetailLink && s.detailHref && (
                 <Link
                   href={s.detailHref}
